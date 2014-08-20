@@ -1,7 +1,7 @@
 var tardis = (function(window, undefined) {
   var _originalDate;
   var _tardis = this;
-  this._offset = 0;
+  _tardis._offset = 0;
 
   var _propertiesToCopy = ['UTC', 'parse', 'toString', 'toLocaleString', 'valueOf'];
 
@@ -45,12 +45,14 @@ var tardis = (function(window, undefined) {
 
     window.Date = _originalDate;
     _originalDate = null;
-    this._offset = 0;
+    _tardis._offset = 0;
   }
 
-  return {
+  var tardis = {
     travelToFuture: travelToFuture,
     travelToPast: travelToPast,
     restoreTime: restoreTime
   };
+  window.tardis = tardis;
+  return tardis;
 })(window);

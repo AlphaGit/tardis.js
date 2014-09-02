@@ -1,3 +1,7 @@
+<p align="center">
+	<img alt="tardis.js logo" src="docs/tardisjs.png" />
+</p>
+
 # tardis.js
 
 Library to mock and work with the Date object. Allows you to travel in time.
